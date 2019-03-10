@@ -1,49 +1,49 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html>
 <head>
-  <title><%= yield :title %></title>
-  <meta charset="utf-8"/>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="<%= yield :meta_description %>"/>
-
-  <%= action_cable_meta_tag %>
-
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-
+  <title>Minionsapp2</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
-  <%= csp_meta_tag %>
+  
+  <!-- CSS - Include Bootstrap -->
+  <link href="css/creative.min.css" rel="stylesheet">
 
-  <!--[if lt IE 9]>
-  <script
-      src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
-  <script
-      src="//cdnjs.cloudflare.com/ajax/libs/json3/3.3.2/json3.min.js"></script>
-  <script
-      src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.js"></script>
-  <![endif]-->
 </head>
-
 <body>
-  <%= render 'layouts/google_analytics' %>
-  <header>
-    <%= render 'layouts/navigation' %>
-  </header>
 
-  <main role="main" class="container">
-    <div class="page-header">
-      <h1><%= yield :heading %></h1>
-    </div>
-    <%= render 'layouts/flash' %>
-    <%= yield %>
-  </main>
-
-  <footer>
-    <hr/>
+<nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
     <div class="container">
-      <%= render 'layouts/footer' %>
+      <a class="navbar-brand js-scroll-trigger" href="#page-top">Start Bootstrap</a>
+      <button class="navbar-toggler navbar-toggler-right collapsed" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto my-2 my-lg-0">
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#sobre">Sobre</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#servicos">Serviços</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#produtos">Produtos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#contato">Contato</a>
+          </li>
+        </ul>
+      </div>
     </div>
-  </footer>
+  </nav>
+
+<%= yield %>
+
+  <footer class="bg-light py-5">
+      <div class="container">
+        <div class="small text-center text-muted">Copyright © 2019 - Reserva de Minions</div>
+      </div>
+    </footer>
+
 </body>
 </html>
